@@ -1487,7 +1487,7 @@ footer {
 #footer, footer {
 	width: 100%;
     padding: 0 20px;
-    background: #292929;
+    background-image: linear-gradient(to bottom, #47536A, #2A68A0);
 	z-index: 9;
     .col-sm-5 {
         padding-left: 30px;
@@ -1577,9 +1577,9 @@ footer {
     text-align: center;
     height: 44px;
     img {
-        width: 80px;
-        height: 80px;
-        margin-top: -76px;
+        width: 72px;
+        height: 86px;
+        margin-top: -56px;
     }
     @include respond-to (normal-mobile){
 		text-align: left;
@@ -1588,8 +1588,8 @@ footer {
 .daodu-stick {
 	text-align: center;
 	img {
-        width: 80px;
-        height: 80px;
+        width: 72px;
+        height: 86px;
         margin-top: -40px;
     }
 }
@@ -1743,7 +1743,9 @@ label[for="arrow"] {
 }
 .main-navigation-wrapper.header-2 .container {
     width: 100%;
-    background: $yellow;
+    background-image: -webkit-linear-gradient(#47536A, #2A68A0);
+    background-image: -o-linear-gradient(#47536A, #2A68A0);
+    background-image: linear-gradient(#47536A, #2A68A0);
     height: 40px;
     line-height: 40px;
     text-align: left;
@@ -2102,7 +2104,9 @@ label[for="arrow"] {
 	}
 }
 .main-navigation-wrapper.header-2 {
-	background: $yellow;
+    background-image: -webkit-linear-gradient(#47536A, #2A68A0);
+    background-image: -o-linear-gradient(#47536A, #2A68A0);
+    background-image: linear-gradient(#47536A, #2A68A0);
 }
 .post-line-bottom {
 	border: 0;

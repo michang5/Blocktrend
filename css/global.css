@@ -1380,7 +1380,7 @@ footer .footer-form .col-sm-6:nth-of-type(2) {
 #footer, footer {
   width: 100%;
   padding: 0 20px;
-  background: #292929;
+  background-image: linear-gradient(to bottom, #47536a, #2a68a0);
   z-index: 9;
 }
 #footer .col-sm-5, footer .col-sm-5 {
@@ -1475,9 +1475,9 @@ footer .footer-form .col-sm-6:nth-of-type(2) {
   height: 44px;
 }
 .toggle-footer img {
-  width: 80px;
-  height: 80px;
-  margin-top: -76px;
+  width: 72px;
+  height: 86px;
+  margin-top: -56px;
 }
 @media only screen and (max-width: 480px) {
   .toggle-footer {
@@ -1489,8 +1489,8 @@ footer .footer-form .col-sm-6:nth-of-type(2) {
   text-align: center;
 }
 .daodu-stick img {
-  width: 80px;
-  height: 80px;
+  width: 72px;
+  height: 86px;
   margin-top: -40px;
 }
 
@@ -1673,7 +1673,9 @@ label[for="arrow"] span {
 
 .main-navigation-wrapper.header-2 .container {
   width: 100%;
-  background: #FFEC50;
+  background-image: -webkit-linear-gradient(#47536A, #2A68A0);
+  background-image: -o-linear-gradient(#47536A, #2A68A0);
+  background-image: linear-gradient(#47536a, #2a68a0);
   height: 40px;
   line-height: 40px;
   text-align: left;
@@ -2033,7 +2035,9 @@ label[for="arrow"] span {
 }
 
 .main-navigation-wrapper.header-2 {
-  background: #FFEC50;
+  background-image: -webkit-linear-gradient(#47536A, #2A68A0);
+  background-image: -o-linear-gradient(#47536A, #2A68A0);
+  background-image: linear-gradient(#47536a, #2a68a0);
 }
 
 .post-line-bottom {
