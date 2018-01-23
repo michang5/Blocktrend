@@ -151,10 +151,70 @@ hr.page {
 			width: 100%;
 		}
 	}
+blockquote {
+	margin: 10px auto 30px;
+    padding: 20px 20px 4px;
+    font-size: 18px;
+	position: relative;
+	border: 0;
+	line-height: 1.85!important;
+    text-align: left;
+    background-color: rgba($orange,.06);
+    border-bottom: 4px solid #F3D1BA;
+    .member_plan & {
+        font-style: normal!important;
+    }
+	p {
+        font-size: 18px;
+        color: $orange;
+		text-align: left;
+		font-weight: normal;
+		line-height: 1.85!important;
+        font-family: 'Roboto', "source-han-sans-traditional", sans-serif, "Microsoft JhengHei"!important;
+		&:after {
+			border-bottom: 0;
+		}
+	}
+	&:before {
+		content:"";
+		background: url('../images/quote.png');
+		background-size: 21px 18px;
+		display: block;
+		width: 21px; 
+		height: 18px;
+		position: relative;
+        margin: -26px auto 0;
+	}
+    .single-post & {
+    }
+	@include respond-to (only-mobile){
+		p {
+			font-size: 16px;
+			line-height: 1.75;
+			font-style: normal;
+		}
+	}
+	@include respond-to (only-device){
+		margin: 20px 0;
+		padding-left: 37px;
+		
+		&:before {
+			content: url('../images/quote_50.png');
+			left: -12px;
+		}
+        .single-post & {
+            &:before {
+                content: none;
+                background: none!important;
+            }
+        }
+	}
+}
 .carousel {
     width: 65%;
     margin: 60px auto 0;
     padding-bottom: 10px;
+    
     .item {
     	text-align: center;
     }
@@ -175,8 +235,21 @@ hr.page {
     blockquote {
 		margin: 30px 0;
         padding-left: 40px;
+        color: $blue-gray;
+        background: transparent;
+        border-bottom: 0;
+        p {
+            color: $blue-gray;
+        }
         &:before {
             left: 0;
+            top: 50px!important;
+            background: url('../images/quote_blue.png');
+            background-size: 21px 18px;
+            display: block;
+            width: 21px; 
+            height: 18px;
+            position: absolute;
         }
     }
     @include respond-to (only-device){
@@ -385,65 +458,7 @@ hr {
     background:url(../images/Line_short.png) no-repeat top center;
 	background-size: 111px 40px;
 }
-blockquote {
-	margin: 10px auto 30px;
-    padding: 20px 20px 4px;
-    font-size: 18px;
-	position: relative;
-	border: 0;
-	line-height: 1.85!important;
-    text-align: left;
-    background-color: rgba($orange,.06);
-    border-bottom: 4px solid #F3D1BA;
-    .member_plan & {
-        font-style: normal!important;
-    }
-	p {
-        font-size: 18px;
-        color: $orange;
-		text-align: left;
-		font-weight: normal;
-		line-height: 1.85!important;
-        font-family: 'Roboto', "source-han-sans-traditional", sans-serif, "Microsoft JhengHei"!important;
-		&:after {
-			border-bottom: 0;
-		}
-	}
-	&:before {
-		content:"";
-		background: url('../images/quote.png');
-		background-size: 21px 18px;
-		display: block;
-		width: 21px; 
-		height: 18px;
-		position: relative;
-        margin: -26px auto 0;
-	}
-    .single-post & {
-    }
-	@include respond-to (only-mobile){
-		p {
-			font-size: 16px;
-			line-height: 1.75;
-			font-style: normal;
-		}
-	}
-	@include respond-to (only-device){
-		margin: 20px 0;
-		padding-left: 37px;
-		
-		&:before {
-			content: url('../images/quote_50.png');
-			left: -12px;
-		}
-        .single-post & {
-            &:before {
-                content: none;
-                background: none!important;
-            }
-        }
-	}
-}
+
 .super {
     vertical-align:super;
 //    padding: 0!important;
@@ -507,7 +522,7 @@ blockquote {
         font-weight: normal;
     }
     hr.page {
-        margin: -20px 0 40px;
+        margin: 20px 0 40px;
         @include respond-to (only-device){
             margin: 40px 0;
         }
@@ -628,7 +643,7 @@ figure {
 			text-align: center;
 		}
 	}
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	padding-top: 40px;
 //	padding: 40px 0;
 	@include respond-to (only-device){
@@ -641,7 +656,7 @@ figure {
 	}
     @include respond-to (normal-mobile){
         padding-bottom: 10px;
-	    padding-top: 10px;
+	    padding-top: 30px;
         h2 {
             font-size: 30px;
         }
@@ -751,6 +766,7 @@ ul.pen-list {
 #section-3 {
 	padding-bottom: 0;
 	position: relative;
+    margin-bottom: 30px;
 	h2 {
 		margin-bottom: 5px;
 	}
@@ -875,8 +891,10 @@ ul.pen-list {
         }
     }
 	.plan {
+        display: inline-block;
+        margin: 20px 10px;
 		a {
-			display: block;
+			display: inline-block;
 			margin-top: 20px;
 			margin-bottom: 20px;
 			box-shadow: 0 12px 20px rgba(0,0,0,.1), 0 3px 10px rgba(0,0,0,.1);
@@ -921,7 +939,38 @@ ul.pen-list {
 		}
         vertical-align: bottom;
         margin-top: 43px;
-		
+	}
+    .plan {
+		a {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+			>span {
+				display: block;
+                &.save {
+                    position: absolute;
+                    bottom: 5px;
+                    left: 0;
+                    width: 100%;
+                    background: $blue-gray;
+                    color: $white;
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+				&:nth-of-type(1) {
+					padding-top: 10px;
+				}
+				&:nth-of-type(2) {
+					span {
+						font-size: 13px;
+						display: inline-block;
+					}
+				}
+                &.del {
+                    text-decoration: line-through;
+                }
+			}
+		}
+        vertical-align: bottom;
+        margin-top: 43px;
 	}
 	@include respond-to (only-desktop){
 		.col-xs-4 {
@@ -1002,7 +1051,11 @@ ul.pen-list {
 				}
 			}
 		}
-	}
+        .plan {
+            width: 46%;
+            margin: 2px; 
+        }
+    }
 }
 #section-6 {
     .col-sm-4 {
@@ -1066,13 +1119,13 @@ ul.pen-list {
 	}
     @media only screen and (max-width: 767px) {
         .guarantee {
-            border: 0;
-            padding: 16px 16px 0;
+            padding: 16px;
+            margin-bottom: 10px;
         }
     }
 }
 #section-7 {
-    background: rgba($orange,.05);
+    background: rgba($orange,.03);
     padding-top: 80px;
 	.col-sm-4 {
 //		border-right: 1px solid #ddd;
@@ -1278,7 +1331,7 @@ ul.pen-list {
 		font-weight: normal;
 	}
 	h4 {
-		border-bottom: 4px solid $yellow;
+		border-bottom: 4px solid $light-gray;
 		margin-bottom: 30px;
 	}
 	.btn {
@@ -1743,22 +1796,35 @@ label[for="arrow"] {
             display: inline-block;
             margin: 4px;
             background-color: $orange;
-            padding: 0 10px;
+            
             font-size: 14px;
             width: 156px;
             text-align: center;
-            color: #fff;
+            
+            a {
+                color: #fff;
+                display: block;
+            }
         }
     }
+}
+.main-top-wrapper {
+    
 }
 .header-2 {
     text-align: center;
     #logo h2 {
-        display: inline-block;
-        padding: 0 30px 20px;
-        border-bottom: 1px solid #cedae5;
+        display: block;
+        padding: 0 30px;
+//        border-bottom: 1px solid #cedae5;
     }
 }
+.header-2 #logo h2[itemprop="description"] {
+    border-bottom: 1px solid #cedae5;
+    display: inline-block;
+    padding: 0 30px 20px;
+}
+
 .featured-posts-container {
 	display: none;
 }
@@ -1848,6 +1914,8 @@ label[for="arrow"] {
 }
 .nav-menu > li > a, .nav-menu > ul > li > a {
     line-height: 40px;
+    margin: 0;
+    padding: 0 10px;
 }
 #main-header.header-2 #main-top-wrapper {
     padding: 50px 0 0;
@@ -2048,7 +2116,7 @@ label[for="arrow"] {
 }
 .date-author p span.date {
 	color: #666!important;
-    padding-left: 70px;
+//    padding-left: 70px;
 //	font-size: 13px;
 }
 .date-author {
@@ -2308,6 +2376,7 @@ label[for="arrow"] {
 }
 .logo-sticky-menu {
 	padding: 0 10px 0 0;
+    height: 40px;
 }
 .sticky-navigation-wrapper.no-floating {
 	background-image: -webkit-linear-gradient($blue-gray, $blue-medium);
@@ -2391,6 +2460,9 @@ label[for="arrow"] {
 }
 #sidebar-nav .sidebar-menu li a:hover .indicator, #sidebar-nav .sidebar-menu .sub-menu li a:hover .indicator, #sidebar-nav .sidebar-menu .children li a:hover .indicator {
 	color: $gray-green;
+}
+.nav-menu > li.menu-item-has-children > a:after, .nav-menu > ul > li.page_item_has_children > a:after {
+    vertical-align: top;
 }
 .main-navigation-wrapper .button-menu-mobile {
 	line-height: 40px;
@@ -2555,12 +2627,12 @@ div.member-only {
 
 
 
-.carousel-indicators-group .active {
-    width: 12px;
-    height: 12px;
-    margin: 0;
-    background-color: #fff;
-}
+//.carousel-indicators-group .active {
+//    width: 12px;
+//    height: 12px;
+//    margin: 0;
+//    background-color: #fff;
+//}
 .carousel-indicators-group {
     position: absolute;
     bottom: 10px;
@@ -2593,13 +2665,13 @@ div.member-only {
   bottom: -20px;
 }
 .carousel-indicators-group .active {
-  background-color: #666;
-  width: 16px;
-  height: 16px;
+  background-color: $orange;
+  width: 14px;
+  height: 14px;
 }
 .carousel-indicators-group li {
-  border-color: #666;
-  background-color: #FFEC50;
+  border-color: $orange;
+  background-color: $white;
   border-width: 2px;
   width: 14px;
   height: 14px;
@@ -2625,11 +2697,11 @@ div.member-only {
 //.carousel p {
 //  font-size: 18px;
 //}
-.carousel p.reader {
+#section-2 blockquote p.reader {
   text-align: right;
   padding-left: 20px;
-  font-size: 16px;
-  color: #666;
+  font-size: 14px;
+  color: $blue-gray;
   font-style: italic;
 }
 .carousel p.reader:before {
@@ -2693,4 +2765,14 @@ body.login div#login h1 a {
 }
 .page .container:not(.sidebar-open) .post-header h1 {
     margin-top: 20px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    padding-left: 10px;
+    color: #666;
+}
+p.small {
+    margin: 0;
 }

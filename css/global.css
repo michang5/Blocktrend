@@ -156,6 +156,63 @@ hr.page {
     width: 100%;
   }
 }
+blockquote {
+  margin: 10px auto 30px;
+  padding: 20px 20px 4px;
+  font-size: 18px;
+  position: relative;
+  border: 0;
+  line-height: 1.85 !important;
+  text-align: left;
+  background-color: rgba(224, 124, 56, 0.06);
+  border-bottom: 4px solid #F3D1BA;
+}
+.member_plan blockquote {
+  font-style: normal !important;
+}
+blockquote p {
+  font-size: 18px;
+  color: #E07C38;
+  text-align: left;
+  font-weight: normal;
+  line-height: 1.85 !important;
+  font-family: "Roboto", "source-han-sans-traditional", sans-serif, "Microsoft JhengHei" !important;
+}
+blockquote p:after {
+  border-bottom: 0;
+}
+blockquote:before {
+  content: "";
+  background: url("../images/quote.png");
+  background-size: 21px 18px;
+  display: block;
+  width: 21px;
+  height: 18px;
+  position: relative;
+  margin: -26px auto 0;
+}
+@media only screen and (max-width: 767px) {
+  blockquote p {
+    font-size: 16px;
+    line-height: 1.75;
+    font-style: normal;
+  }
+}
+@media only screen and (max-width: 768px) {
+  blockquote {
+    margin: 20px 0;
+    padding-left: 37px;
+  }
+  blockquote:before {
+    content: url("../images/quote_50.png");
+    left: -12px;
+  }
+  .single-post blockquote:before {
+    content: none;
+    background: none !important;
+  }
+}
+
 .carousel {
   width: 65%;
   margin: 60px auto 0;
@@ -181,9 +238,22 @@ hr.page {
 .carousel blockquote {
   margin: 30px 0;
   padding-left: 40px;
+  color: #47536A;
+  background: transparent;
+  border-bottom: 0;
+}
+.carousel blockquote p {
+  color: #47536A;
 }
 .carousel blockquote:before {
   left: 0;
+  top: 50px !important;
+  background: url("../images/quote_blue.png");
+  background-size: 21px 18px;
+  display: block;
+  width: 21px;
+  height: 18px;
+  position: absolute;
 }
 @media only screen and (max-width: 768px) {
   .carousel {
@@ -378,63 +448,6 @@ hr {
   background-size: 111px 40px;
 }
 
-blockquote {
-  margin: 10px auto 30px;
-  padding: 20px 20px 4px;
-  font-size: 18px;
-  position: relative;
-  border: 0;
-  line-height: 1.85 !important;
-  text-align: left;
-  background-color: rgba(224, 124, 56, 0.06);
-  border-bottom: 4px solid #F3D1BA;
-}
-.member_plan blockquote {
-  font-style: normal !important;
-}
-blockquote p {
-  font-size: 18px;
-  color: #E07C38;
-  text-align: left;
-  font-weight: normal;
-  line-height: 1.85 !important;
-  font-family: "Roboto", "source-han-sans-traditional", sans-serif, "Microsoft JhengHei" !important;
-}
-blockquote p:after {
-  border-bottom: 0;
-}
-blockquote:before {
-  content: "";
-  background: url("../images/quote.png");
-  background-size: 21px 18px;
-  display: block;
-  width: 21px;
-  height: 18px;
-  position: relative;
-  margin: -26px auto 0;
-}
-@media only screen and (max-width: 767px) {
-  blockquote p {
-    font-size: 16px;
-    line-height: 1.75;
-    font-style: normal;
-  }
-}
-@media only screen and (max-width: 768px) {
-  blockquote {
-    margin: 20px 0;
-    padding-left: 37px;
-  }
-  blockquote:before {
-    content: url("../images/quote_50.png");
-    left: -12px;
-  }
-  .single-post blockquote:before {
-    content: none;
-    background: none !important;
-  }
-}
-
 .super {
   vertical-align: super;
 }
@@ -496,7 +509,7 @@ blockquote:before {
   font-weight: normal;
 }
 #member_plan hr.page {
-  margin: -20px 0 40px;
+  margin: 20px 0 40px;
 }
 @media only screen and (max-width: 768px) {
   #member_plan hr.page {
@@ -584,7 +597,7 @@ figure figcaption a:hover {
 }
 
 #member-section, #section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7 {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   padding-top: 40px;
 }
 #member-section h2, #section-1 h2, #section-2 h2, #section-3 h2, #section-4 h2, #section-5 h2, #section-6 h2, #section-7 h2 {
@@ -627,7 +640,7 @@ figure figcaption a:hover {
 @media only screen and (max-width: 480px) {
   #member-section, #section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7 {
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 30px;
   }
   #member-section h2, #section-1 h2, #section-2 h2, #section-3 h2, #section-4 h2, #section-5 h2, #section-6 h2, #section-7 h2 {
     font-size: 30px;
@@ -729,6 +742,7 @@ ul.pen-list li:before {
 #section-3 {
   padding-bottom: 0;
   position: relative;
+  margin-bottom: 30px;
 }
 #section-3 h2 {
   margin-bottom: 5px;
@@ -838,11 +852,13 @@ ul.pen-list li:before {
   float: left;
 }
 #section-5 .plan {
+  display: inline-block;
+  margin: 20px 10px;
   vertical-align: bottom;
   margin-top: 43px;
 }
 #section-5 .plan a {
-  display: block;
+  display: inline-block;
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -883,6 +899,36 @@ ul.pen-list li:before {
 #section-5 .plan a > span:nth-of-type(2) span {
   font-size: 18px;
   display: block;
+}
+#section-5 .plan {
+  vertical-align: bottom;
+  margin-top: 43px;
+}
+#section-5 .plan a {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+#section-5 .plan a > span {
+  display: block;
+}
+#section-5 .plan a > span.save {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  background: #47536A;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 14px;
+}
+#section-5 .plan a > span:nth-of-type(1) {
+  padding-top: 10px;
+}
+#section-5 .plan a > span:nth-of-type(2) span {
+  font-size: 13px;
+  display: inline-block;
+}
+#section-5 .plan a > span.del {
+  text-decoration: line-through;
 }
 @media only screen and (min-width: 769px) {
   #section-5 .col-xs-4 {
@@ -947,6 +993,10 @@ ul.pen-list li:before {
     font-size: 16px;
     display: block;
   }
+  #section-5 .plan {
+    width: 46%;
+    margin: 2px;
+  }
 }
 
 #section-6 .col-sm-4 {
@@ -1007,13 +1057,13 @@ ul.pen-list li:before {
 }
 @media only screen and (max-width: 767px) {
   #section-6 .guarantee {
-    border: 0;
-    padding: 16px 16px 0;
+    padding: 16px;
+    margin-bottom: 10px;
   }
 }
 
 #section-7 {
-  background: rgba(224, 124, 56, 0.05);
+  background: rgba(224, 124, 56, 0.03);
   padding-top: 80px;
 }
 #section-7 h2 {
@@ -1197,7 +1247,7 @@ ul.pen-list li:before {
   font-weight: normal;
 }
 #member-section h4 {
-  border-bottom: 4px solid #FFEC50;
+  border-bottom: 4px solid #E1E1E1;
   margin-bottom: 30px;
 }
 #member-section .btn {
@@ -1658,20 +1708,27 @@ label[for="arrow"] span {
   display: inline-block;
   margin: 4px;
   background-color: #E07C38;
-  padding: 0 10px;
   font-size: 14px;
   width: 156px;
   text-align: center;
+}
+#logo .top-btn li a {
   color: #fff;
+  display: block;
 }
 
 .header-2 {
   text-align: center;
 }
 .header-2 #logo h2 {
+  display: block;
+  padding: 0 30px;
+}
+
+.header-2 #logo h2[itemprop="description"] {
+  border-bottom: 1px solid #cedae5;
   display: inline-block;
   padding: 0 30px 20px;
-  border-bottom: 1px solid #cedae5;
 }
 
 .featured-posts-container {
@@ -1776,6 +1833,8 @@ label[for="arrow"] span {
 
 .nav-menu > li > a, .nav-menu > ul > li > a {
   line-height: 40px;
+  margin: 0;
+  padding: 0 10px;
 }
 
 #main-header.header-2 #main-top-wrapper {
@@ -1986,7 +2045,6 @@ label[for="arrow"] span {
 
 .date-author p span.date {
   color: #666 !important;
-  padding-left: 70px;
 }
 
 .date-author {
@@ -2242,6 +2300,7 @@ label[for="arrow"] span {
 
 .logo-sticky-menu {
   padding: 0 10px 0 0;
+  height: 40px;
 }
 
 .sticky-navigation-wrapper.no-floating {
@@ -2316,6 +2375,10 @@ label[for="arrow"] span {
 
 #sidebar-nav .sidebar-menu li a:hover .indicator, #sidebar-nav .sidebar-menu .sub-menu li a:hover .indicator, #sidebar-nav .sidebar-menu .children li a:hover .indicator {
   color: #438894;
+}
+
+.nav-menu > li.menu-item-has-children > a:after, .nav-menu > ul > li.page_item_has_children > a:after {
+  vertical-align: top;
 }
 
 .main-navigation-wrapper .button-menu-mobile {
@@ -2478,13 +2541,6 @@ div.member-only a span {
   background: none;
 }
 
-.carousel-indicators-group .active {
-  width: 12px;
-  height: 12px;
-  margin: 0;
-  background-color: #fff;
-}
-
 .carousel-indicators-group {
   position: absolute;
   bottom: 10px;
@@ -2520,14 +2576,14 @@ div.member-only a span {
 }
 
 .carousel-indicators-group .active {
-  background-color: #666;
-  width: 16px;
-  height: 16px;
+  background-color: #E07C38;
+  width: 14px;
+  height: 14px;
 }
 
 .carousel-indicators-group li {
-  border-color: #666;
-  background-color: #FFEC50;
+  border-color: #E07C38;
+  background-color: #fff;
   border-width: 2px;
   width: 14px;
   height: 14px;
@@ -2554,11 +2610,11 @@ div.member-only a span {
   text-align: center;
 }
 
-.carousel p.reader {
+#section-2 blockquote p.reader {
   text-align: right;
   padding-left: 20px;
-  font-size: 16px;
-  color: #666;
+  font-size: 14px;
+  color: #47536A;
   font-style: italic;
 }
 
@@ -2617,4 +2673,15 @@ body.login div#login h1 a {
 
 .page .container:not(.sidebar-open) .post-header h1 {
   margin-top: 20px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  padding-left: 10px;
+  color: #666;
+}
+
+p.small {
+  margin: 0;
 }
