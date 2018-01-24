@@ -105,7 +105,7 @@ hr.page {
     position: relative;
     margin-left: 16px;
     p {
-        color: #7E4620;
+//        color: #7E4620;
     }
     &:before {
         content: '';
@@ -199,14 +199,14 @@ blockquote {
 		padding-left: 37px;
 		
 		&:before {
-			content: url('../images/quote_50.png');
-			left: -12px;
+            content:"";
+            display: block;
 		}
         .single-post & {
-            &:before {
-                content: none;
-                background: none!important;
-            }
+//            &:before {
+//                content: none;
+//                background: none!important;
+//            }
         }
 	}
 }
@@ -259,8 +259,7 @@ blockquote {
 			margin: 20px 0;
 			padding-left: 37px;
 			&:before {
-				content: url('../images/quote_50.png');
-				left: -12px;
+				top: 60px!important;
 			}
 		}
     }
@@ -1796,7 +1795,6 @@ label[for="arrow"] {
             display: inline-block;
             margin: 4px;
             background-color: $orange;
-            
             font-size: 14px;
             width: 156px;
             text-align: center;
@@ -1804,6 +1802,14 @@ label[for="arrow"] {
             a {
                 color: #fff;
                 display: block;
+            }
+        }
+    }
+    @include respond-to (normal-mobile){
+        .top-btn {
+            padding: 0!important;
+            li {
+                width: 136px;
             }
         }
     }

@@ -109,9 +109,6 @@ hr.page {
   position: relative;
   margin-left: 16px;
 }
-.morning p {
-  color: #7E4620;
-}
 .morning:before {
   content: '';
   background-image: url(../images/sticker_square.png);
@@ -204,12 +201,8 @@ blockquote:before {
     padding-left: 37px;
   }
   blockquote:before {
-    content: url("../images/quote_50.png");
-    left: -12px;
-  }
-  .single-post blockquote:before {
-    content: none;
-    background: none !important;
+    content: "";
+    display: block;
   }
 }
 
@@ -265,8 +258,7 @@ blockquote:before {
     padding-left: 37px;
   }
   .carousel blockquote:before {
-    content: url("../images/quote_50.png");
-    left: -12px;
+    top: 60px !important;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -1715,6 +1707,14 @@ label[for="arrow"] span {
 #logo .top-btn li a {
   color: #fff;
   display: block;
+}
+@media only screen and (max-width: 480px) {
+  #logo .top-btn {
+    padding: 0 !important;
+  }
+  #logo .top-btn li {
+    width: 136px;
+  }
 }
 
 .header-2 {
