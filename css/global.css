@@ -126,7 +126,9 @@ hr.page {
     padding: 0 20px;
   }
 }
-
+.carousel-indicators {
+    margin-top: 20px;
+}
 .carousel-indicators.carousel-indicators-1 {
   top: -40px;
   bottom: 0;
@@ -135,19 +137,24 @@ hr.page {
   bottom: -20px;
 }
 .carousel-indicators .active {
-  background-color: #666;
+  background-color: #E07C38;
   width: 16px;
   height: 16px;
 }
 .carousel-indicators li {
-  border-color: #666;
-  background-color: #FFEC50;
+  border-color: #E07C38;
+  background-color: #fff;
   border-width: 2px;
   width: 14px;
   height: 14px;
   vertical-align: middle;
 }
 
+@media only screen and (min-width: 768px) {
+  .carousel-indicators {
+    bottom: 0;
+  }
+}
 @media only screen and (max-width: 768px) {
   .carousel {
     width: 100%;
@@ -228,6 +235,7 @@ blockquote:before {
   content: "─";
   padding-right: 8px;
 }
+.page-container blockquote,
 .carousel blockquote {
   margin: 30px 0;
   padding-left: 40px;
@@ -235,9 +243,11 @@ blockquote:before {
   background: transparent;
   border-bottom: 0;
 }
+.page-container blockquote p ,
 .carousel blockquote p {
   color: #47536A;
 }
+.page-container blockquote:before,
 .carousel blockquote:before {
   left: 0;
   top: 50px !important;
@@ -253,10 +263,12 @@ blockquote:before {
     width: 90%;
     margin: 30px auto 0;
   }
+   .page-container blockquote, 
   .carousel blockquote {
     margin: 20px 0;
     padding-left: 37px;
   }
+   .page-container blockquote:before, 
   .carousel blockquote:before {
     top: 60px !important;
   }
@@ -287,9 +299,10 @@ input[type='text'], input[type='password'] {
 
 .btn-defult {
   background-color: #fff;
-  border: 1px solid #438894;
-  color: #4f7177;
+  border: 1px solid #E07C38;
+  color: #E07C38;
   margin: 10px;
+    border-radius: 34px
 }
 .btn-defult:hover, .btn-defult:active, .btn-defult:focus, .btn-defult.active, .btn-defult.dropdown-toggle {
   border: 0;
@@ -451,7 +464,7 @@ hr {
 .alert {
   font-size: 16px;
   border: 0;
-  box-shadow: 0 2px 0 #FFEC50;
+  box-shadow: 0 2px 0 #E07C38;
 }
 .alert i {
   padding-right: 6px;
@@ -465,12 +478,12 @@ hr {
   color: #fff;
 }
 .alert.alert-success {
-  background: #438894;
+  background: #48AAE0;
   color: #fff;
 }
 .alert.alert-info {
   background: #666;
-  color: #FFEC50;
+  color: #E1E1E1;
 }
 
 .note {
@@ -542,8 +555,8 @@ hr {
 }
 
 .block-p {
-  background: #E1E1E1;
-  border: 1px solid #ddd;
+  background-color: rgba(224,124,56, .1) ;
+  border-radius: 10px;
   padding: 40px 50px;
 }
 .block-p p {
@@ -948,6 +961,10 @@ ul.pen-list li:before {
     margin-top: 7px;
     padding: 2px 0;
   }
+    #section-5 .row-3 .plan a {
+        height: 130px;
+        padding: 8px 16px 26px;
+    }
 }
 @media only screen and (max-width: 768px) {
   #section-5 {
@@ -989,8 +1006,35 @@ ul.pen-list li:before {
     width: 46%;
     margin: 2px;
   }
+    #section-5 .row-3 {
+/*
+        margin-left: -0px;
+        margin-right: -20px;
+*/
+    }
+    #section-5 .row-3 .plan {
+        width: 31%;
+        height: 120px;
+    }
+    #section-5 .row-3 .plan a {
+        height: 120px;
+    }
+    
 }
-
+@media only screen and (max-width: 480px) {
+    #section-5 .row-3 .plan {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #section-5 .row-3 .plan:nth-of-type(1) a, #section-5 .row-3 .plan:nth-of-type(2) a {
+        height: auto;
+        min-height: 90px;
+    }
+    #section-5 .row-3 .plan:nth-of-type(3) a {
+        height: auto;
+        min-height: 110px
+    }
+}
 #section-6 .col-sm-4 {
   padding-left: 7px;
   padding-right: 7px;
@@ -1677,6 +1721,7 @@ label[for="arrow"] span {
 #logo {
   z-index: 0;
   text-align: center;
+    margin-bottom: 20px;
 }
 #logo img {
   width: 192px;
@@ -2010,24 +2055,35 @@ label[for="arrow"] span {
   position: relative;
   top: -28px;
 }
+.post-list .article-item .issue {
+  top: -30px;
+}
 @media only screen and (max-width: 480px) {
+/*
   .issue {
     font-size: 16px;
   }
+*/
 }
 @media only screen and (max-width: 1023px) {
   .issue {
-    left: -150px;
+        left: -150px;
+        width: 40px;
+        height: 51px;
+        background-size: 40px 51px;
+        padding-top: 22px;
+        font-size: 13px;
   }
+    .post-list .article-item .issue {
+      top: -25px;
+    }
 }
 @media only screen and (min-width: 1024px) {
   .issue {
     left: -150px;
   }
 }
-.post-list .article-item .issue {
-  top: -30px;
-}
+
 
 .issue ~ .date-author span {
   padding: 0;
@@ -2042,7 +2098,14 @@ label[for="arrow"] span {
     padding-left: 0;
   }
 }
-
+@media only screen and (max-width: 480px) {
+  .issue ~ .date-author span {
+    padding-left: 50px;
+  }
+    .post-list .article-item .issue {
+      left: -130px;
+    }
+}
 .date-author p span.date {
   color: #666 !important;
 }
@@ -2356,9 +2419,10 @@ label[for="arrow"] span {
 
 #sidebar-nav .sidebar-menu li a {
   font-size: 16px;
+  text-align: left;
 }
 #sidebar-nav .sidebar-menu li a:hover {
-  color: #438894;
+  color: #2A68A0;
 }
 
 .main-navigation-wrapper.header-2 .nav-menu > li > ul > li > a {

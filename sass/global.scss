@@ -2451,8 +2451,9 @@ label[for="arrow"] {
 }
 #sidebar-nav .sidebar-menu li a {
 	font-size: 16px;
+    text-align: left;
 	&:hover {
-		color: $gray-green;
+		color: $blue-medium;
 	}
 }
 .main-navigation-wrapper.header-2 .nav-menu > li > ul > li > a {
