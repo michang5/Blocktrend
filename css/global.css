@@ -858,9 +858,8 @@ ul.pen-list li:before {
 }
 #section-5 .plan {
   display: inline-block;
-  margin: 20px 10px;
+  margin: 10px;
   vertical-align: bottom;
-  margin-top: 43px;
 }
 #section-5 .plan a {
   display: inline-block;
@@ -907,7 +906,6 @@ ul.pen-list li:before {
 }
 #section-5 .plan {
   vertical-align: bottom;
-  margin-top: 43px;
 }
 #section-5 .plan a {
   font-family: 'Helvetica', 'Arial', sans-serif;
